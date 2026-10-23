@@ -1,0 +1,41 @@
+server:
+  address: ${KB_BIND_ADDRESS:127.0.0.1}
+  port: ${KB_PORT:8088}
+  error:
+    include-message: never
+    include-stacktrace: never
+spring:
+  application:
+    name: knowledge-api
+  datasource:
+    url: jdbc:h2:file:./data/knowledge;MODE=MySQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: ""
+    driver-class-name: org.h2.Driver
+    hikari:
+      connection-timeout: 3000
+      validation-timeout: 1500
+  sql:
+    init:
+      mode: always
+      encoding: UTF-8
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 11MB
+  jackson:
+    default-property-inclusion: non_null
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    arg-name-based-constructor-auto-mapping: true
+    default-statement-timeout: 15
+kb:
+  session-hours: 24
+  ai-enabled: ${KB_AI_ENABLED:false}
+  ai-base-url: ${KB_AI_BASE_URL:}
+  ai-api-key: ${KB_AI_API_KEY:}
+  ai-model: ${KB_AI_MODEL:}
+logging:
+  level:
+    cn.knowledge: INFO

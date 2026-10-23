@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: ${KB_DB_URL:jdbc:mysql://127.0.0.1:3306/ai_knowledge?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC}
+    username: ${KB_DB_USERNAME:knowledge}
+    password: ${KB_DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver

@@ -1,0 +1,18 @@
+.cache/
+.runtime/
+data/
+backups/
+target/
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+.idea/
+.vscode/
+*.iml
+
+# Personal Notion exports kept beside the project (source examples live under backend/src).
+/*.zip
+/无标题*.md

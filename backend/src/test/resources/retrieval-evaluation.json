@@ -1,0 +1,9 @@
+[
+  {"question":"Spring Boot 的自动配置有什么作用？","expectedSourceContains":"合适的默认配置"},
+  {"question":"Service 和 Mapper 分别负责什么？","expectedSourceContains":"Service 组织业务规则"},
+  {"question":"MyBatis 参数绑定如何避免 SQL 注入？","expectedSourceContains":"预编译语句"},
+  {"question":"数据库事务的 ACID 是什么？","expectedSourceContains":"原子性"},
+  {"question":"如何保证用户资料隔离？","expectedSourceContains":"限制 user_id"},
+  {"question":"青竹分享会什么时候开始？","expectedSourceContains":"每周三 19:30"},
+  {"question":"海王星轨道半径与火星卫星数量","noEvidence":true}
+]
